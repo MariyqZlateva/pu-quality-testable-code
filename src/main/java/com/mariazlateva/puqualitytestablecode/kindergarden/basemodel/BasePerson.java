@@ -1,8 +1,6 @@
 package com.mariazlateva.puqualitytestablecode.kindergarden.basemodel;
 
-public interface BasePerson {
-
-    Long getId();
+public interface BasePerson extends BaseEntity {
 
     String getFirstName();
 

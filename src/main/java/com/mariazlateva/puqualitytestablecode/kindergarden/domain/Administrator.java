@@ -1,10 +1,7 @@
 package com.mariazlateva.puqualitytestablecode.kindergarden.domain;
 
 import com.mariazlateva.puqualitytestablecode.kindergarden.basemodel.BasePerson;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,8 +10,10 @@ import javax.persistence.Id;
 
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode
 @ToString
+@Builder
 @Entity
 public class Administrator implements BasePerson {
 
@@ -26,16 +25,16 @@ public class Administrator implements BasePerson {
 
     @Override
     public Long getId() {
-        return null;
+        return this.id;
     }
 
     @Override
     public String getFirstName() {
-        return null;
+        return this.firstName;
     }
 
     @Override
     public String getLastName() {
-        return null;
+        return this.lastName;
     }
 }
