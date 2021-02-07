@@ -53,14 +53,14 @@ class BasePersonValidatorTest {
 
     @ParameterizedTest(name = ARGUMENTS_PLACEHOLDER)
     @MethodSource("basePersonProvider")
-    void validateParameterized(BasePerson basePerson, String expectedMessage) throws EntityValidationException {
-
+    void validateParameterized(BasePerson basePerson, String expectedMessage) {
         Exception exception = assertThrows(EntityValidationException.class,
                 () -> this.basePersonValidator.validate(basePerson));
         String exceptionMessage = exception.getMessage();
-       assertEquals(expectedMessage, exceptionMessage);
+        assertEquals(expectedMessage, exceptionMessage);
     }
 
+    //== private methods ==
     private static Stream<Arguments> basePersonProvider() {
         return Stream.of(
                 Arguments.of(Administrator.builder().id(1L).firstName(null).lastName("Admin One Last").build(), BASE_PERSON_FIRST_NAME_IS_NULL),
