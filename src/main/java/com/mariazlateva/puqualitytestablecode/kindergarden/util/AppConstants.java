@@ -2,7 +2,7 @@ package com.mariazlateva.puqualitytestablecode.kindergarden.util;
 
 public final class AppConstants {
 
-    public static final String ADMIN_NOT_FOUND = "Admin with %d not found";
+    public static final String ADMIN_NOT_FOUND = "Admin with ID = %d not found";
 
     //validation exception messages
     public static final String BASE_ENTITY_IS_NULL = "Entity is null";
@@ -13,7 +13,8 @@ public final class AppConstants {
     public static final String BASE_PERSON_LAST_NAME_IS_EMPTY = "Last Name Is Empty";
 
     //Mappings
-    public static final String MAPPING_ADMIN_BASE = "/admin";
+    public static final String API_BASE_URL = "/api";
+    public static final String ADMIN_BASE_URL = "/admin";
 
     private AppConstants() {
     }

@@ -70,7 +70,7 @@ class AdministratorServiceImplTest {
     @Test
     void findAdminByIdNotFound() {
         //given
-        String expectedMessage = "Admin with 1 not found";
+        String expectedMessage = "Admin with ID = 1 not found";
         when(this.administratorRepository.findById(anyLong())).thenReturn(Optional.empty());
 
         //when

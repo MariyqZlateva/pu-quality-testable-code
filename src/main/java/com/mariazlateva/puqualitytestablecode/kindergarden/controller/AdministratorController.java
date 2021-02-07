@@ -5,18 +5,16 @@ import com.mariazlateva.puqualitytestablecode.kindergarden.service.Administrator
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static com.mariazlateva.puqualitytestablecode.kindergarden.util.AppConstants.MAPPING_ADMIN_BASE;
+import static com.mariazlateva.puqualitytestablecode.kindergarden.util.AppConstants.ADMIN_BASE_URL;
+import static com.mariazlateva.puqualitytestablecode.kindergarden.util.AppConstants.API_BASE_URL;
 
 @Slf4j
 @RestController
-@RequestMapping(MAPPING_ADMIN_BASE)
+@RequestMapping(API_BASE_URL + ADMIN_BASE_URL)
 public class AdministratorController {
 
     private final AdministratorService administratorService;
@@ -28,8 +26,14 @@ public class AdministratorController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<Administrator> findAllAdmins(){
+    public List<Administrator> findAllAdmins() {
         return this.administratorService.findAllAdmins();
+    }
+
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Administrator findAdminById(@PathVariable String id) {
+        return this.administratorService.findAdminById(Long.valueOf(id));
     }
 
 }
