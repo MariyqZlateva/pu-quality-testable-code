@@ -50,7 +50,6 @@ class BaseEntityValidatorTest {
                 Arguments.of(null, BASE_ENTITY_IS_NULL),
                 Arguments.of(Administrator.builder().id(null).build(), BASE_ENTITY_ID_IS_NULL)
         );
-
     }
 
 }

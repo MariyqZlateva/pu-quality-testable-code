@@ -12,6 +12,8 @@ public final class AppConstants {
     public static final String BASE_PERSON_LAST_NAME_IS_NULL = "Last Name Is Null";
     public static final String BASE_PERSON_LAST_NAME_IS_EMPTY = "Last Name Is Empty";
 
+    //Mappings
+    public static final String MAPPING_ADMIN_BASE = "/admin";
 
     private AppConstants() {
     }
