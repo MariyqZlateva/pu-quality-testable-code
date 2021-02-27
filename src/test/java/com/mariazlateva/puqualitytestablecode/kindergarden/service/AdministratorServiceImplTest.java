@@ -22,7 +22,7 @@ class AdministratorServiceImplTest {
     @Mock
     AdministratorRepository administratorRepository;
 
-    AdministratorServiceImpl administratorService;
+    AdministratorService administratorService;
 
 
     @BeforeEach

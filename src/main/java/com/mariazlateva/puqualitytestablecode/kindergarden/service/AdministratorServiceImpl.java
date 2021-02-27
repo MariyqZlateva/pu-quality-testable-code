@@ -20,11 +20,19 @@ public class AdministratorServiceImpl implements AdministratorService {
         this.administratorRepository = administratorRepository;
     }
 
+    /**
+     * @return List of administrators
+     */
     @Override
     public List<Administrator> findAllAdmins() {
         return this.administratorRepository.findAll();
     }
 
+    /**
+     * @param id Long
+     * @return administrator
+     * Throws: AdministratorNotFoundException if admin with given id is not present
+     */
     @Override
     public Administrator findAdminById(Long id) {
         return this.administratorRepository
