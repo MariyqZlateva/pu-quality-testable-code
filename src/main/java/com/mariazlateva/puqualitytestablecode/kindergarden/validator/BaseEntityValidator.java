@@ -12,6 +12,12 @@ import static com.mariazlateva.puqualitytestablecode.kindergarden.util.AppConsta
 @Component
 public class BaseEntityValidator {
 
+    /**
+     * validate BaseEntity fields
+     * @param entity of type BaseEntity
+     * @throws EntityValidationException if entity is null
+     * @throws EntityValidationException if entity id is null
+     */
     public void validate(BaseEntity entity) throws EntityValidationException {
         if (entity == null) {
             throw new EntityValidationException(BASE_ENTITY_IS_NULL);
